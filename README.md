@@ -27,15 +27,25 @@ Tech Stack
 - NLP: NLTK
 - Logging: Python logging module
 Folder Structure
+
 ├── app.py
+
 ├── templates/
+
 ├── static/
+
 ├── bitcoin_data.csv
+
 ├── ethereum_data.csv
+
 ├── binancecoin_data.csv
+
 ├── cardano_data.csv
+
 ├── predictions_log.json
+
 ├── news_cache.json
+
 How to Run
 1. Clone the repo
 2. Create and activate a virtual environment
