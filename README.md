@@ -13,6 +13,7 @@ Include the following screenshots:
 <img width="1920" height="1080" alt="Screenshot 2025-04-25 015154" src="https://github.com/user-attachments/assets/4ae28cdc-13f9-4c7e-8ca6-8f504bef55d7" />
 <img width="1920" height="1080" alt="Screenshot 2025-04-25 015118" src="https://github.com/user-attachments/assets/ec0fe5d1-2f7b-4717-8002-b249b4e3819d" />
 <img width="1920" height="1080" alt="Screenshot 2025-04-25 014117" src="https://github.com/user-attachments/assets/b61176e3-cf0a-4030-aaf6-dd98402cb664" />
+
 How It Works
 - ML Model: XGBoost Regressor trained on 365 days of historical prices.
 - Features: Day index, lag1 (1-day price lag), lag7 (7-day lag), MA7 (7-day moving average).
