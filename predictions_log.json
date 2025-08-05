@@ -1,0 +1,912 @@
+[
+  {
+    "timestamp": "2025-04-24 15:07:25",
+    "crypto": "bitcoin",
+    "days_ahead": 1,
+    "prediction_date": "2025-04-25",
+    "model_day_index": 366,
+    "predicted_price": 91062.35,
+    "actual_price": 92422.0,
+    "accuracy": 98.53
+  },
+  {
+    "timestamp": "2025-04-24 15:07:36",
+    "crypto": "binancecoin",
+    "days_ahead": 5,
+    "prediction_date": "2025-04-29",
+    "model_day_index": 370,
+    "predicted_price": 598.98,
+    "actual_price": 603.96,
+    "accuracy": 99.18
+  },
+  {
+    "timestamp": "2025-04-24 15:48:57",
+    "crypto": "bitcoin",
+    "days_ahead": 5,
+    "prediction_date": "2025-04-29",
+    "model_day_index": 370,
+    "predicted_price": 93700.32,
+    "actual_price": 92467.0,
+    "accuracy": 98.67
+  },
+  {
+    "timestamp": "2025-04-24 16:07:29",
+    "crypto": "bitcoin",
+    "days_ahead": 13,
+    "prediction_date": "2025-05-07",
+    "model_day_index": 378,
+    "predicted_price": 94577.68,
+    "actual_price": 92506.0,
+    "accuracy": 97.76
+  },
+  {
+    "timestamp": "2025-04-24 16:07:48",
+    "crypto": "bitcoin",
+    "days_ahead": 19,
+    "prediction_date": "2025-05-13",
+    "model_day_index": 384,
+    "predicted_price": 96073.97,
+    "actual_price": 92506.0,
+    "accuracy": 96.14
+  },
+  {
+    "timestamp": "2025-04-24 16:08:00",
+    "crypto": "bitcoin",
+    "days_ahead": 30,
+    "prediction_date": "2025-05-24",
+    "model_day_index": 395,
+    "predicted_price": 97275.17,
+    "actual_price": 92506.0,
+    "accuracy": 94.84
+  },
+  {
+    "timestamp": "2025-04-24 16:08:06",
+    "crypto": "bitcoin",
+    "days_ahead": 28,
+    "prediction_date": "2025-05-22",
+    "model_day_index": 393,
+    "predicted_price": 97275.17,
+    "actual_price": 92506.0,
+    "accuracy": 94.84
+  },
+  {
+    "timestamp": "2025-04-24 16:11:47",
+    "crypto": "ethereum",
+    "days_ahead": 28,
+    "prediction_date": "2025-05-22",
+    "model_day_index": 393,
+    "predicted_price": 1954.1,
+    "actual_price": 1746.34,
+    "accuracy": 88.1
+  },
+  {
+    "timestamp": "2025-04-24 16:12:01",
+    "crypto": "ethereum",
+    "days_ahead": 17,
+    "prediction_date": "2025-05-11",
+    "model_day_index": 382,
+    "predicted_price": 1936.18,
+    "actual_price": 1746.34,
+    "accuracy": 89.13
+  },
+  {
+    "timestamp": "2025-04-24 16:12:09",
+    "crypto": "bitcoin",
+    "days_ahead": 17,
+    "prediction_date": "2025-05-11",
+    "model_day_index": 382,
+    "predicted_price": 95323.87,
+    "actual_price": 92522.0,
+    "accuracy": 96.97
+  },
+  {
+    "timestamp": "2025-04-24 16:12:14",
+    "crypto": "bitcoin",
+    "days_ahead": 20,
+    "prediction_date": "2025-05-14",
+    "model_day_index": 385,
+    "predicted_price": 97052.22,
+    "actual_price": 92522.0,
+    "accuracy": 95.1
+  },
+  {
+    "timestamp": "2025-04-24 16:17:30",
+    "crypto": "bitcoin",
+    "days_ahead": 5,
+    "prediction_date": "2025-04-29",
+    "model_day_index": 370,
+    "predicted_price": 93700.32,
+    "actual_price": 92601.0,
+    "accuracy": 98.81
+  },
+  {
+    "timestamp": "2025-04-24 16:17:40",
+    "crypto": "bitcoin",
+    "days_ahead": 7,
+    "prediction_date": "2025-05-01",
+    "model_day_index": 372,
+    "predicted_price": 96081.08,
+    "actual_price": 92318.23,
+    "accuracy": 95.92
+  },
+  {
+    "timestamp": "2025-04-24 16:17:47",
+    "crypto": "bitcoin",
+    "days_ahead": 5,
+    "prediction_date": "2025-04-29",
+    "model_day_index": 370,
+    "predicted_price": 93700.32,
+    "actual_price": 92318.23,
+    "accuracy": 98.5
+  },
+  {
+    "timestamp": "2025-04-24 16:18:44",
+    "crypto": "bitcoin",
+    "days_ahead": 5,
+    "prediction_date": "2025-04-29",
+    "model_day_index": 370,
+    "predicted_price": 93700.32,
+    "actual_price": 92608.0,
+    "accuracy": 98.82
+  },
+  {
+    "timestamp": "2025-04-24 16:18:45",
+    "crypto": "bitcoin",
+    "days_ahead": 5,
+    "prediction_date": "2025-04-29",
+    "model_day_index": 370,
+    "predicted_price": 93700.32,
+    "actual_price": 92608.0,
+    "accuracy": 98.82
+  },
+  {
+    "timestamp": "2025-04-24 16:19:48",
+    "crypto": "bitcoin",
+    "days_ahead": 6,
+    "prediction_date": "2025-04-30",
+    "model_day_index": 371,
+    "predicted_price": 93941.19,
+    "actual_price": 92609.0,
+    "accuracy": 98.56
+  },
+  {
+    "timestamp": "2025-04-24 16:20:29",
+    "crypto": "bitcoin",
+    "days_ahead": 9,
+    "prediction_date": "2025-05-03",
+    "model_day_index": 374,
+    "predicted_price": 94734.8,
+    "actual_price": 92609.0,
+    "accuracy": 97.7
+  },
+  {
+    "timestamp": "2025-04-24 16:20:34",
+    "crypto": "bitcoin",
+    "days_ahead": 6,
+    "prediction_date": "2025-04-30",
+    "model_day_index": 371,
+    "predicted_price": 93941.19,
+    "actual_price": 92609.0,
+    "accuracy": 98.56
+  },
+  {
+    "timestamp": "2025-04-24 16:20:40",
+    "crypto": "bitcoin",
+    "days_ahead": 10,
+    "prediction_date": "2025-05-04",
+    "model_day_index": 375,
+    "predicted_price": 94733.95,
+    "actual_price": 92609.0,
+    "accuracy": 97.71
+  },
+  {
+    "timestamp": "2025-04-24 16:20:47",
+    "crypto": "bitcoin",
+    "days_ahead": 20,
+    "prediction_date": "2025-05-14",
+    "model_day_index": 385,
+    "predicted_price": 97052.22,
+    "actual_price": 92609.0,
+    "accuracy": 95.2
+  },
+  {
+    "timestamp": "2025-04-24 16:20:56",
+    "crypto": "bitcoin",
+    "days_ahead": 16,
+    "prediction_date": "2025-05-10",
+    "model_day_index": 381,
+    "predicted_price": 95445.96,
+    "actual_price": 92607.0,
+    "accuracy": 96.93
+  },
+  {
+    "timestamp": "2025-04-24 16:20:58",
+    "crypto": "bitcoin",
+    "days_ahead": 16,
+    "prediction_date": "2025-05-10",
+    "model_day_index": 381,
+    "predicted_price": 95445.96,
+    "actual_price": 92318.23,
+    "accuracy": 96.61
+  },
+  {
+    "timestamp": "2025-04-24 16:26:29",
+    "crypto": "bitcoin",
+    "days_ahead": 20,
+    "prediction_date": "2025-05-14",
+    "model_day_index": 385,
+    "predicted_price": 97052.22,
+    "actual_price": 92602.0,
+    "accuracy": 95.19
+  },
+  {
+    "timestamp": "2025-04-24 16:50:53",
+    "crypto": "bitcoin",
+    "days_ahead": 1,
+    "prediction_date": "2025-04-25",
+    "model_day_index": 366,
+    "predicted_price": 91062.35,
+    "actual_price": 92388.0,
+    "accuracy": 98.57
+  },
+  {
+    "timestamp": "2025-04-24 16:51:16",
+    "crypto": "bitcoin",
+    "days_ahead": 8,
+    "prediction_date": "2025-05-02",
+    "model_day_index": 373,
+    "predicted_price": 94538.82,
+    "actual_price": 92388.0,
+    "accuracy": 97.67
+  },
+  {
+    "timestamp": "2025-04-24 17:11:10",
+    "crypto": "bitcoin",
+    "days_ahead": 9,
+    "prediction_date": "2025-05-03",
+    "model_day_index": 374,
+    "predicted_price": 94734.8,
+    "actual_price": 92380.0,
+    "accuracy": 97.45
+  },
+  {
+    "timestamp": "2025-04-24 17:11:18",
+    "crypto": "bitcoin",
+    "days_ahead": 7,
+    "prediction_date": "2025-05-01",
+    "model_day_index": 372,
+    "predicted_price": 96081.08,
+    "actual_price": 92318.23,
+    "accuracy": 95.92
+  },
+  {
+    "timestamp": "2025-04-24 17:11:22",
+    "crypto": "bitcoin",
+    "days_ahead": 8,
+    "prediction_date": "2025-05-02",
+    "model_day_index": 373,
+    "predicted_price": 94538.82,
+    "actual_price": 92318.23,
+    "accuracy": 97.59
+  },
+  {
+    "timestamp": "2025-04-24 17:11:25",
+    "crypto": "bitcoin",
+    "days_ahead": 8,
+    "prediction_date": "2025-05-02",
+    "model_day_index": 373,
+    "predicted_price": 94538.82,
+    "actual_price": 92318.23,
+    "accuracy": 97.59
+  },
+  {
+    "timestamp": "2025-04-24 17:11:26",
+    "crypto": "bitcoin",
+    "days_ahead": 8,
+    "prediction_date": "2025-05-02",
+    "model_day_index": 373,
+    "predicted_price": 94538.82,
+    "actual_price": 92318.23,
+    "accuracy": 97.59
+  },
+  {
+    "timestamp": "2025-04-24 17:11:31",
+    "crypto": "bitcoin",
+    "days_ahead": 10,
+    "prediction_date": "2025-05-04",
+    "model_day_index": 375,
+    "predicted_price": 94733.95,
+    "actual_price": 92318.23,
+    "accuracy": 97.38
+  },
+  {
+    "timestamp": "2025-04-24 17:11:52",
+    "crypto": "ethereum",
+    "days_ahead": 20,
+    "prediction_date": "2025-05-14",
+    "model_day_index": 385,
+    "predicted_price": 1940.47,
+    "actual_price": 1758.12,
+    "accuracy": 89.63
+  },
+  {
+    "timestamp": "2025-04-24 17:12:02",
+    "crypto": "ethereum",
+    "days_ahead": 16,
+    "prediction_date": "2025-05-10",
+    "model_day_index": 381,
+    "predicted_price": 1945.34,
+    "actual_price": 1758.12,
+    "accuracy": 89.35
+  },
+  {
+    "timestamp": "2025-04-24 17:12:16",
+    "crypto": "bitcoin",
+    "days_ahead": 8,
+    "prediction_date": "2025-05-02",
+    "model_day_index": 373,
+    "predicted_price": 94538.82,
+    "actual_price": 92318.23,
+    "accuracy": 97.59
+  },
+  {
+    "timestamp": "2025-04-24 17:12:19",
+    "crypto": "bitcoin",
+    "days_ahead": 8,
+    "prediction_date": "2025-05-02",
+    "model_day_index": 373,
+    "predicted_price": 94538.82,
+    "actual_price": 92379.0,
+    "accuracy": 97.66
+  },
+  {
+    "timestamp": "2025-04-24 17:12:27",
+    "crypto": "bitcoin",
+    "days_ahead": 13,
+    "prediction_date": "2025-05-07",
+    "model_day_index": 378,
+    "predicted_price": 94577.68,
+    "actual_price": 92379.0,
+    "accuracy": 97.62
+  },
+  {
+    "timestamp": "2025-04-24 17:13:32",
+    "crypto": "bitcoin",
+    "days_ahead": 9,
+    "prediction_date": "2025-05-03",
+    "model_day_index": 374,
+    "predicted_price": 94734.8,
+    "actual_price": 92389.0,
+    "accuracy": 97.46
+  },
+  {
+    "timestamp": "2025-04-24 17:13:50",
+    "crypto": "bitcoin",
+    "days_ahead": 14,
+    "prediction_date": "2025-05-08",
+    "model_day_index": 379,
+    "predicted_price": 95445.96,
+    "actual_price": 92318.23,
+    "accuracy": 96.61
+  },
+  {
+    "timestamp": "2025-04-24 17:15:10",
+    "crypto": "ethereum",
+    "days_ahead": 14,
+    "prediction_date": "2025-05-08",
+    "model_day_index": 379,
+    "predicted_price": 1945.34,
+    "actual_price": 1744.05,
+    "accuracy": 88.46
+  },
+  {
+    "timestamp": "2025-04-24 17:15:16",
+    "crypto": "binancecoin",
+    "days_ahead": 14,
+    "prediction_date": "2025-05-08",
+    "model_day_index": 379,
+    "predicted_price": 624.89,
+    "actual_price": 597.11,
+    "accuracy": 95.35
+  },
+  {
+    "timestamp": "2025-04-24 17:15:22",
+    "crypto": "cardano",
+    "days_ahead": 14,
+    "prediction_date": "2025-05-08",
+    "model_day_index": 379,
+    "predicted_price": 0.69,
+    "actual_price": 0.69,
+    "accuracy": 99.73
+  },
+  {
+    "timestamp": "2025-04-24 17:15:41",
+    "crypto": "cardano",
+    "days_ahead": 22,
+    "prediction_date": "2025-05-16",
+    "model_day_index": 387,
+    "predicted_price": 0.77,
+    "actual_price": 0.69,
+    "accuracy": 87.53
+  },
+  {
+    "timestamp": "2025-04-24 17:15:43",
+    "crypto": "cardano",
+    "days_ahead": 22,
+    "prediction_date": "2025-05-16",
+    "model_day_index": 387,
+    "predicted_price": 0.77,
+    "actual_price": 0.69,
+    "accuracy": 87.53
+  },
+  {
+    "timestamp": "2025-04-24 17:22:38",
+    "crypto": "bitcoin",
+    "days_ahead": 9,
+    "prediction_date": "2025-05-03",
+    "model_day_index": 374,
+    "predicted_price": 94734.8,
+    "actual_price": 92519.0,
+    "accuracy": 97.61
+  },
+  {
+    "timestamp": "2025-04-24 17:22:45",
+    "crypto": "bitcoin",
+    "days_ahead": 14,
+    "prediction_date": "2025-05-08",
+    "model_day_index": 379,
+    "predicted_price": 95445.96,
+    "actual_price": 92318.23,
+    "accuracy": 96.61
+  },
+  {
+    "timestamp": "2025-04-24 17:27:33",
+    "crypto": "bitcoin",
+    "days_ahead": 9,
+    "prediction_date": "2025-05-03",
+    "model_day_index": 374,
+    "predicted_price": 94734.8,
+    "actual_price": 92574.0,
+    "accuracy": 97.67
+  },
+  {
+    "timestamp": "2025-04-24 17:27:48",
+    "crypto": "bitcoin",
+    "days_ahead": 2,
+    "prediction_date": "2025-04-26",
+    "model_day_index": 367,
+    "predicted_price": 92589.27,
+    "actual_price": 92318.23,
+    "accuracy": 99.71
+  },
+  {
+    "timestamp": "2025-04-24 17:31:09",
+    "crypto": "bitcoin",
+    "days_ahead": 11,
+    "prediction_date": "2025-05-05",
+    "model_day_index": 376,
+    "predicted_price": 93746.06,
+    "actual_price": 92613.0,
+    "accuracy": 98.78
+  },
+  {
+    "timestamp": "2025-04-24 17:41:31",
+    "crypto": "bitcoin",
+    "days_ahead": 5,
+    "prediction_date": "2025-04-29",
+    "model_day_index": 370,
+    "predicted_price": 93700.32,
+    "actual_price": 92318.23,
+    "accuracy": 98.5
+  },
+  {
+    "timestamp": "2025-04-24 17:41:42",
+    "crypto": "bitcoin",
+    "days_ahead": 10,
+    "prediction_date": "2025-05-04",
+    "model_day_index": 375,
+    "predicted_price": 94733.95,
+    "actual_price": 92318.23,
+    "accuracy": 97.38
+  },
+  {
+    "timestamp": "2025-04-24 17:44:29",
+    "crypto": "bitcoin",
+    "days_ahead": 1,
+    "prediction_date": "2025-04-25",
+    "model_day_index": 366,
+    "predicted_price": 91062.35,
+    "actual_price": 92520.0,
+    "accuracy": 98.42
+  },
+  {
+    "timestamp": "2025-04-24 18:07:23",
+    "crypto": "bitcoin",
+    "days_ahead": 6,
+    "prediction_date": "2025-04-30",
+    "model_day_index": 371,
+    "predicted_price": 93941.19,
+    "actual_price": 92653.0,
+    "accuracy": 98.61
+  },
+  {
+    "timestamp": "2025-04-24 18:13:59",
+    "crypto": "bitcoin",
+    "days_ahead": 12,
+    "prediction_date": "2025-05-06",
+    "model_day_index": 377,
+    "predicted_price": 94119.12,
+    "actual_price": 92698.0,
+    "accuracy": 98.47
+  },
+  {
+    "timestamp": "2025-04-24 18:16:12",
+    "crypto": "bitcoin",
+    "days_ahead": 8,
+    "prediction_date": "2025-05-02",
+    "model_day_index": 373,
+    "predicted_price": 94538.82,
+    "actual_price": 92318.23,
+    "accuracy": 97.59
+  },
+  {
+    "timestamp": "2025-04-24 18:23:27",
+    "crypto": "bitcoin",
+    "days_ahead": 11,
+    "prediction_date": "2025-05-05",
+    "model_day_index": 376,
+    "predicted_price": 93746.06,
+    "actual_price": 92667.0,
+    "accuracy": 98.84
+  },
+  {
+    "timestamp": "2025-04-24 18:23:52",
+    "crypto": "bitcoin",
+    "days_ahead": 19,
+    "prediction_date": "2025-05-13",
+    "model_day_index": 384,
+    "predicted_price": 96073.97,
+    "actual_price": 92318.23,
+    "accuracy": 95.93
+  },
+  {
+    "timestamp": "2025-04-24 18:31:47",
+    "crypto": "ethereum",
+    "days_ahead": 6,
+    "prediction_date": "2025-04-30",
+    "model_day_index": 371,
+    "predicted_price": 1777.16,
+    "actual_price": 1756.72,
+    "accuracy": 98.84
+  },
+  {
+    "timestamp": "2025-04-24 18:33:10",
+    "crypto": "bitcoin",
+    "days_ahead": 1,
+    "prediction_date": "2025-04-25",
+    "model_day_index": 366,
+    "predicted_price": 91062.35,
+    "actual_price": 92318.23,
+    "accuracy": 98.64
+  },
+  {
+    "timestamp": "2025-04-24 18:33:51",
+    "crypto": "bitcoin",
+    "days_ahead": 1,
+    "prediction_date": "2025-04-25",
+    "model_day_index": 366,
+    "predicted_price": 91062.35,
+    "actual_price": 92766.0,
+    "accuracy": 98.16
+  },
+  {
+    "timestamp": "2025-04-24 18:33:57",
+    "crypto": "ethereum",
+    "days_ahead": 1,
+    "prediction_date": "2025-04-25",
+    "model_day_index": 366,
+    "predicted_price": 1734.93,
+    "actual_price": 1758.12,
+    "accuracy": 98.68
+  },
+  {
+    "timestamp": "2025-04-24 18:34:02",
+    "crypto": "binancecoin",
+    "days_ahead": 1,
+    "prediction_date": "2025-04-25",
+    "model_day_index": 366,
+    "predicted_price": 602.29,
+    "actual_price": 603.96,
+    "accuracy": 99.72
+  },
+  {
+    "timestamp": "2025-04-24 18:34:07",
+    "crypto": "cardano",
+    "days_ahead": 1,
+    "prediction_date": "2025-04-25",
+    "model_day_index": 366,
+    "predicted_price": 0.67,
+    "actual_price": 0.68,
+    "accuracy": 98.96
+  },
+  {
+    "timestamp": "2025-04-25 01:06:33",
+    "crypto": "bitcoin",
+    "days_ahead": 7,
+    "prediction_date": "2025-05-01",
+    "model_day_index": 372,
+    "predicted_price": 96081.08,
+    "actual_price": 93543.0,
+    "accuracy": 97.29
+  },
+  {
+    "timestamp": "2025-04-25 01:26:43",
+    "crypto": "bitcoin",
+    "days_ahead": 11,
+    "prediction_date": "2025-05-05",
+    "model_day_index": 376,
+    "predicted_price": 93746.06,
+    "actual_price": 93636.0,
+    "accuracy": 99.88
+  },
+  {
+    "timestamp": "2025-04-25 01:26:55",
+    "crypto": "ethereum",
+    "days_ahead": 16,
+    "prediction_date": "2025-05-10",
+    "model_day_index": 381,
+    "predicted_price": 1945.34,
+    "actual_price": 1765.7,
+    "accuracy": 89.83
+  },
+  {
+    "timestamp": "2025-04-25 01:27:09",
+    "crypto": "binancecoin",
+    "days_ahead": 18,
+    "prediction_date": "2025-05-12",
+    "model_day_index": 383,
+    "predicted_price": 642.77,
+    "actual_price": 599.32,
+    "accuracy": 92.75
+  },
+  {
+    "timestamp": "2025-04-25 01:27:26",
+    "crypto": "cardano",
+    "days_ahead": 22,
+    "prediction_date": "2025-05-16",
+    "model_day_index": 387,
+    "predicted_price": 0.77,
+    "actual_price": 0.73,
+    "accuracy": 94.35
+  },
+  {
+    "timestamp": "2025-04-25 01:29:51",
+    "crypto": "bitcoin",
+    "days_ahead": 7,
+    "prediction_date": "2025-05-01",
+    "model_day_index": 372,
+    "predicted_price": 96081.08,
+    "actual_price": 93659.0,
+    "accuracy": 97.41
+  },
+  {
+    "timestamp": "2025-04-25 01:30:15",
+    "crypto": "bitcoin",
+    "days_ahead": 16,
+    "prediction_date": "2025-05-10",
+    "model_day_index": 381,
+    "predicted_price": 95445.96,
+    "actual_price": 93659.0,
+    "accuracy": 98.09
+  },
+  {
+    "timestamp": "2025-04-25 01:30:34",
+    "crypto": "ethereum",
+    "days_ahead": 19,
+    "prediction_date": "2025-05-13",
+    "model_day_index": 384,
+    "predicted_price": 1940.47,
+    "actual_price": 1766.27,
+    "accuracy": 90.14
+  },
+  {
+    "timestamp": "2025-04-25 01:30:56",
+    "crypto": "binancecoin",
+    "days_ahead": 19,
+    "prediction_date": "2025-05-13",
+    "model_day_index": 384,
+    "predicted_price": 642.77,
+    "actual_price": 599.35,
+    "accuracy": 92.76
+  },
+  {
+    "timestamp": "2025-04-25 01:31:16",
+    "crypto": "cardano",
+    "days_ahead": 19,
+    "prediction_date": "2025-05-13",
+    "model_day_index": 384,
+    "predicted_price": 0.76,
+    "actual_price": 0.73,
+    "accuracy": 95.71
+  },
+  {
+    "timestamp": "2025-04-25 01:34:32",
+    "crypto": "bitcoin",
+    "days_ahead": 4,
+    "prediction_date": "2025-04-28",
+    "model_day_index": 369,
+    "predicted_price": 93846.5,
+    "actual_price": 92318.23,
+    "accuracy": 98.34
+  },
+  {
+    "timestamp": "2025-04-25 01:35:23",
+    "crypto": "bitcoin",
+    "days_ahead": 17,
+    "prediction_date": "2025-05-11",
+    "model_day_index": 382,
+    "predicted_price": 95323.87,
+    "actual_price": 92318.23,
+    "accuracy": 96.74
+  },
+  {
+    "timestamp": "2025-04-25 01:35:42",
+    "crypto": "ethereum",
+    "days_ahead": 10,
+    "prediction_date": "2025-05-04",
+    "model_day_index": 375,
+    "predicted_price": 1829.44,
+    "actual_price": 1766.1,
+    "accuracy": 96.41
+  },
+  {
+    "timestamp": "2025-04-25 01:36:00",
+    "crypto": "binancecoin",
+    "days_ahead": 10,
+    "prediction_date": "2025-05-04",
+    "model_day_index": 375,
+    "predicted_price": 611.81,
+    "actual_price": 599.34,
+    "accuracy": 97.92
+  },
+  {
+    "timestamp": "2025-04-25 01:36:20",
+    "crypto": "cardano",
+    "days_ahead": 17,
+    "prediction_date": "2025-05-11",
+    "model_day_index": 382,
+    "predicted_price": 0.76,
+    "actual_price": 0.73,
+    "accuracy": 95.68
+  },
+  {
+    "timestamp": "2025-04-25 01:51:05",
+    "crypto": "bitcoin",
+    "days_ahead": 20,
+    "prediction_date": "2025-05-14",
+    "model_day_index": 385,
+    "predicted_price": 97052.22,
+    "actual_price": 93462.0,
+    "accuracy": 96.16
+  },
+  {
+    "timestamp": "2025-04-25 01:51:48",
+    "crypto": "bitcoin",
+    "days_ahead": 28,
+    "prediction_date": "2025-05-22",
+    "model_day_index": 393,
+    "predicted_price": 97275.17,
+    "actual_price": 93462.0,
+    "accuracy": 95.92
+  },
+  {
+    "timestamp": "2025-04-25 01:52:11",
+    "crypto": "ethereum",
+    "days_ahead": 18,
+    "prediction_date": "2025-05-12",
+    "model_day_index": 383,
+    "predicted_price": 1940.47,
+    "actual_price": 1765.4,
+    "accuracy": 90.08
+  },
+  {
+    "timestamp": "2025-04-25 01:52:45",
+    "crypto": "binancecoin",
+    "days_ahead": 30,
+    "prediction_date": "2025-05-24",
+    "model_day_index": 395,
+    "predicted_price": 638.0,
+    "actual_price": 598.99,
+    "accuracy": 93.49
+  },
+  {
+    "timestamp": "2025-04-25 01:53:10",
+    "crypto": "cardano",
+    "days_ahead": 10,
+    "prediction_date": "2025-05-04",
+    "model_day_index": 375,
+    "predicted_price": 0.69,
+    "actual_price": 0.73,
+    "accuracy": 94.42
+  },
+  {
+    "timestamp": "2025-04-25 09:52:35",
+    "crypto": "bitcoin",
+    "days_ahead": 9,
+    "prediction_date": "2025-05-03",
+    "model_day_index": 374,
+    "predicted_price": 94734.8,
+    "actual_price": 93456.0,
+    "accuracy": 98.63
+  },
+  {
+    "timestamp": "2025-04-25 10:10:10",
+    "crypto": "bitcoin",
+    "days_ahead": 1,
+    "prediction_date": "2025-04-25",
+    "model_day_index": 366,
+    "predicted_price": 91062.35,
+    "actual_price": 93187.0,
+    "accuracy": 97.72
+  },
+  {
+    "timestamp": "2025-04-25 10:10:21",
+    "crypto": "bitcoin",
+    "days_ahead": 9,
+    "prediction_date": "2025-05-03",
+    "model_day_index": 374,
+    "predicted_price": 94734.8,
+    "actual_price": 92318.23,
+    "accuracy": 97.38
+  },
+  {
+    "timestamp": "2025-04-25 10:59:22",
+    "crypto": "bitcoin",
+    "days_ahead": 7,
+    "prediction_date": "2025-05-01",
+    "model_day_index": 372,
+    "predicted_price": 96081.08,
+    "actual_price": 93347.0,
+    "accuracy": 97.07
+  },
+  {
+    "timestamp": "2025-07-03 15:33:48",
+    "crypto": "bitcoin",
+    "days_ahead": 5,
+    "prediction_date": "2025-04-29",
+    "model_day_index": 370,
+    "predicted_price": 93700.32,
+    "actual_price": 109975.0,
+    "accuracy": 85.2
+  },
+  {
+    "timestamp": "2025-07-21 16:38:06",
+    "crypto": "bitcoin",
+    "days_ahead": 3,
+    "prediction_date": "2025-04-27",
+    "model_day_index": 368,
+    "predicted_price": 93686.88,
+    "actual_price": 118677.0,
+    "accuracy": 78.94
+  },
+  {
+    "timestamp": "2025-07-21 21:24:17",
+    "crypto": "bitcoin",
+    "days_ahead": 13,
+    "prediction_date": "2025-05-07",
+    "model_day_index": 378,
+    "predicted_price": 94577.68,
+    "actual_price": 118513.0,
+    "accuracy": 79.8
+  },
+  {
+    "timestamp": "2025-07-21 21:24:46",
+    "crypto": "binancecoin",
+    "days_ahead": 28,
+    "prediction_date": "2025-05-22",
+    "model_day_index": 393,
+    "predicted_price": 633.17,
+    "actual_price": 774.98,
+    "accuracy": 81.7
+  }
+]

@@ -1,0 +1,252 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #F4F8FB; /* Light Blue Background (Light Mode) */
+    color: #333;
+    transition: background 0.3s, color 0.3s; /* Smooth transition for light/dark mode */
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background: #121212; /* Dark Background */
+    color: white; /* Light Text Color */
+}
+/* Dark/Light Mode Toggle Button */
+#theme-toggle {
+    background: #64B5F6; /* Soft Blue Background */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover Effect */
+#theme-toggle:hover {
+    background: #1976D2; /* Darker Blue on Hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Active State */
+#theme-toggle:active {
+    background: #0D47A1; /* Even Darker Blue on Active Click */
+    transform: scale(0.98); /* Slight shrink effect on click */
+}
+
+/* Focus State */
+#theme-toggle:focus {
+    outline: none; /* Remove the default focus outline */
+    box-shadow: 0 0 5px #64B5F6; /* Soft blue glow around button */
+}
+
+
+/* Header & Navbar */
+header {
+    background: #1976D2; /* Dark Blue */
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s; /* Transition for background */
+}
+
+/* Dark Mode for Header */
+body.dark-mode header {
+    background: #0D47A1; /* Darker Blue for Dark Mode */
+}
+
+/* Logo Styling */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Navbar */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Container */
+.contain {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+/* Dark Mode for Container */
+body.dark-mode .contain {
+    background: #1C1C1C; /* Dark background for contain */
+}
+
+/* Sections */
+.section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    background: #E3F2FD; /* Light Blue */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s;
+}
+
+/* Dark Mode for Sections */
+body.dark-mode .section {
+    background: #333; /* Darker background for sections */
+}
+
+/* Headings */
+h1, h2 {
+    color: #0D47A1; /* Deep Blue */
+}
+
+/* Dark Mode for Headings */
+body.dark-mode h1, body.dark-mode h2 {
+    color: #BBDEFB; /* Lighter color for headings in dark mode */
+}
+
+/* Live Prices Section */
+#live-prices {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.crypto-card {
+    background: white;
+    border: 2px solid #64B5F6; /* Soft Blue Border */
+    padding: 15px;
+    margin: 10px;
+    width: 220px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+}
+
+.crypto-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark Mode for Crypto Cards */
+body.dark-mode .crypto-card {
+    background: #2C2C2C; /* Dark background for cards */
+    border-color: #2196F3; /* Lighter border in dark mode */
+}
+
+/* Prediction Form */
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    margin: 20px auto;
+    transition: background 0.3s;
+}
+
+/* Dark Mode for Prediction Form */
+body.dark-mode .container {
+    background: #1C1C1C;
+}
+
+/* Button Styling */
+.btn-primary {
+    background: #2196F3;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background: #1565C0;
+}
+
+/* Dark Mode for Button */
+body.dark-mode .btn-primary {
+    background: #90CAF9; /* Lighter blue for buttons in dark mode */
+}
+
+body.dark-mode .btn-primary:hover {
+    background: #64B5F6; /* Slightly darker blue on hover */
+}
+
+/* Prediction Result Styling */
+#prediction-result {
+    margin-top: 20px;
+}
+
+/* Styling for the predicted price box */
+.prediction-box {
+    background: #BBDEFB;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the prediction graph */
+.prediction-graph {
+    width: 100%; /* Ensure the graph is responsive */
+    max-width: 600px;
+    margin: 0 auto; /* Center the graph */
+    display: block;
+}
+
+/* Hiding the result section initially */
+#prediction-result {
+    display: none; /* Hidden by default */
+}
+
+
+/* Footer */
+footer {
+    background: #1976D2;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+/* Dark Mode for Footer */
+body.dark-mode footer {
+    background: #0D47A1; /* Darker blue footer for dark mode */
+}

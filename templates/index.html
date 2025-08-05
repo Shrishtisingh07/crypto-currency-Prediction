@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crypto Price Prediction - MoneyTalks</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">MoneyTalks</div>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/news">News</a></li>
+        <li><button id="theme-toggle">Mode</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container my-5">
+    <section class="mb-5 text-center">
+      <h2>Welcome to MoneyTalks</h2>
+      <p class="lead">
+        Predict the future of cryptocurrencies with our advanced machine learning models. Track live prices, explore predictions, and stay informed with the latest crypto news—all in one place.
+      </p>
+    </section>
+
+    <section class="mb-5">
+      <h3>Live Cryptocurrency Prices</h3>
+      <div class="row" id="live-prices">
+        <div class="col-md-3 mb-4">
+          <div class="crypto-card" id="bitcoin">
+            <h4>Bitcoin (BTC)</h4>
+            <p>Price: $<span class="price">Loading...</span></p>
+            <p>24hr Change: <span class="change">-</span></p>
+            <p><a href="https://www.coingecko.com/en/coins/bitcoin" target="_blank" class="verify-link">Verify Price</a></p>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="crypto-card" id="ethereum">
+            <h4>Ethereum (ETH)</h4>
+            <p>Price: $<span class="price">Loading...</span></p>
+            <p>24hr Change: <span class="change">-</span></p>
+            <p><a href="https://www.coingecko.com/en/coins/ethereum" target="_blank" class="verify-link">Verify Price</a></p>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="crypto-card" id="binancecoin">
+            <h4>Binance Coin (BNB)</h4>
+            <p>Price: $<span class="price">Loading...</span></p>
+            <p>24hr Change: <span class="change">-</span></p>
+            <p><a href="https://www.coingecko.com/en/coins/binance-coin" target="_blank" class="verify-link">Verify Price</a></p>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="crypto-card" id="cardano">
+            <h4>Cardano (ADA)</h4>
+            <p>Price: $<span class="price">Loading...</span></p>
+            <p>24hr Change: <span class="change">-</span></p>
+            <p><a href="https://www.coingecko.com/en/coins/cardano" target="_blank" class="verify-link">Verify Price</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-5">
+      <h3 class="text-center">Predict Future Prices</h3>
+      <p class="text-center">
+        Our prediction tool uses XGBoost models trained on historical data to forecast cryptocurrency prices. Select a cryptocurrency and the number of days ahead to see the predicted price and an interactive graph. Actual prices are sourced live from CoinGecko.
+      </p>
+      <div class="row">
+        <div class="col-lg-4 col-md-12 mb-4">
+          <div class="card p-4">
+            <div class="mb-3">
+              <label for="crypto" class="form-label">Cryptocurrency</label>
+              <select id="crypto" class="form-select custom-select">
+                <option value="bitcoin">Bitcoin (BTC)</option>
+                <option value="ethereum">Ethereum (ETH)</option>
+                <option value="binancecoin">Binance Coin (BNB)</option>
+                <option value="cardano">Cardano (ADA)</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="days" class="form-label">Days Ahead (1-30)</label>
+              <input type="number" id="days" class="form-control custom-input" min="1" max="30" value="1">
+            </div>
+            <div class="text-center">
+              <button id="predictBtn" class="btn btn-primary me-2">Predict Now</button>
+              <button id="clearBtn" class="btn btn-secondary">Clear</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8 col-md-12">
+          <div id="result" class="card p-4" style="display: none;">
+            <h4 class="text-center">Prediction Results</h4>
+            <p><strong>Actual Price on <span id="actual-date"></span>: </strong><span id="actual-price"></span></p>
+            <p><strong>Predicted Price on <span id="predicted-date"></span>: </strong><span id="predicted-price"></span></p>
+            <p><strong>Proposed Accuracy: </strong><span id="accuracy"></span></p>
+            <div id="alerts" class="alerts-container"></div>
+            <div id="chart-container" style="position: relative; width: 100%; height: 300px; display: block;">
+              <canvas id="prediction-chart" style="width: 100%; height: 100%;"></canvas>
+            </div>
+            <div id="chart-error" class="alert alert-danger mt-3" style="display: none;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-center py-3">
+    <p>Contact Us: <a style="color:#ffffff" href="mailto:support@moneytalks.com">support@moneytalks.com</a></p>
+  </footer>
+
+  <div id="chat-toggle" onclick="toggleChatbot()" style="position: fixed; bottom: 25px; right: 25px; background: #007bff; color: white; border-radius: 50%; width: 55px; height: 55px; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.2); z-index: 1000;">
+    💬
+  </div>
+
+  <div id="chatbox" style="display: none; position: fixed; bottom: 90px; right: 25px; width: 320px; max-height: 400px; background: white; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); overflow: hidden; font-family: Arial, sans-serif; z-index: 999;">
+    <div style="background: #007bff; color: white; padding: 12px; font-weight: bold;">Crypto Assistant</div>
+    <div id="messages" style="padding: 10px; height: 280px; overflow-y: auto; background: #f7f7f7;"></div>
+    <div style="display: flex; border-top: 1px solid #ccc;">
+      <input type="text" id="userInput" placeholder="Ask me anything..." style="flex: 1; padding: 10px; border: none; outline: none; font-size: 14px;">
+      <button id="sendBtn" style="padding: 10px; border: none; background: #007bff; color: white; cursor: pointer;">Send</button>
+    </div>
+  </div>
+
+  <script>
+    const coins = ["bitcoin", "ethereum", "binancecoin", "cardano"];
+    let predictionChart = null;
+
+    function fetchLivePrices() {
+      coins.forEach(coin => {
+        fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${coin}&vs_currencies=usd&include_24hr_change=true`)
+          .then(res => res.json())
+          .then(data => {
+            const price = data[coin].usd;
+            const change = data[coin].usd_24h_change.toFixed(2);
+            const card = document.getElementById(coin);
+            card.querySelector(".price").innerText = price;
+            card.querySelector(".change").innerText = `${change}%`;
+            card.querySelector(".change").style.color = change < 0 ? "red" : "green";
+          }).catch(err => console.error(`Failed to fetch price for ${coin}:`, err));
+      });
+    }
+
+    function updateChart(historicalPrices, predictedDate, predictedPrice, crypto) {
+  try {
+    console.log("updateChart called with:", { historicalPrices, predictedDate, predictedPrice, crypto });
+    let canvas = document.getElementById('prediction-chart');
+    const chartError = document.getElementById('chart-error');
+    chartError.style.display = 'none';
+
+    if (!canvas) {
+      console.error("Canvas element not found for prediction-chart");
+      chartError.textContent = "Error: Canvas not found. Please try again.";
+      chartError.style.display = 'block';
+      return;
+    }
+
+    const ctx = canvas.getContext('2d');
+    if (!ctx) {
+      console.error("Canvas context not found for prediction-chart");
+      chartError.textContent = "Error: Canvas context not available.";
+      chartError.style.display = 'block';
+      return;
+    }
+
+    if (!historicalPrices || !Array.isArray(historicalPrices) || historicalPrices.length === 0) {
+      console.error("Invalid historicalPrices:", historicalPrices);
+      chartError.textContent = "Error: No historical price data available.";
+      chartError.style.display = 'block';
+      return;
+    }
+
+    // Validate dates
+    const isValidDate = (dateStr) => {
+      const regex = /^\d{4}-\d{2}-\d{2}$/;
+      if (!regex.test(dateStr)) return false;
+      const date = new Date(dateStr);
+      return !isNaN(date.getTime());
+    };
+
+    const invalidDates = historicalPrices.filter(data => !isValidDate(data.date));
+    if (invalidDates.length > 0) {
+      console.error("Invalid dates in historicalPrices:", invalidDates);
+      chartError.textContent = "Error: Invalid date format in historical data.";
+      chartError.style.display = 'block';
+      return;
+    }
+
+    if (!isValidDate(predictedDate)) {
+      console.error("Invalid predictedDate:", predictedDate);
+      chartError.textContent = "Error: Invalid predicted date format.";
+      chartError.style.display = 'block';
+      return;
+    }
+
+    // Destroy all Chart.js instances on canvas
+    if (typeof Chart !== 'undefined') {
+      Object.keys(Chart.instances).forEach(id => {
+        const chart = Chart.instances[id];
+        if (chart.canvas.id === 'prediction-chart') {
+          console.log("Destroying chart instance with ID:", id);
+          chart.destroy();
+        }
+      });
+    }
+    predictionChart = null; // Clear global variable
+    // Fully reset canvas by replacing it
+    const newCanvas = canvas.cloneNode(true);
+    canvas.parentNode.replaceChild(newCanvas, canvas);
+    newCanvas.id = 'prediction-chart'; // Restore ID
+    console.log("Canvas fully replaced and reset for prediction-chart");
+
+    const isDarkMode = document.body.classList.contains('dark-mode');
+
+    const historicalData = historicalPrices.map(data => ({
+      x: data.date,
+      y: data.price
+    }));
+    const predictedData = [{
+      x: predictedDate,
+      y: predictedPrice
+    }];
+
+    console.log("Chart data:", { historicalData, predictedData });
+
+    predictionChart = new Chart(newCanvas.getContext('2d'), {
+      type: 'line',
+      data: {
+        datasets: [
+          {
+            label: 'Historical Prices',
+            data: historicalData,
+            borderColor: isDarkMode ? '#90caf9' : '#007bff',
+            backgroundColor: isDarkMode ? 'rgba(144, 202, 249, 0.1)' : 'rgba(0, 123, 255, 0.1)',
+            fill: true,
+            pointRadius: 3
+          },
+          {
+            label: 'Predicted Price',
+            data: predictedData,
+            borderColor: '#ff4444',
+            backgroundColor: 'rgba(255, 68, 68, 0.5)',
+            pointRadius: 6,
+            pointStyle: 'circle',
+            showLine: false
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            labels: {
+              color: isDarkMode ? '#f1f1f1' : '#333'
+            }
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                const label = context.dataset.label || '';
+                const date = context.raw.x;
+                const price = context.parsed.y.toFixed(2);
+                return `${label}: Date: ${date}, Price: $${price}`;
+              }
+            }
+          }
+        },
+        scales: {
+          x: {
+            type: 'time',
+            time: {
+              unit: 'day',
+              displayFormats: {
+                day: 'yyyy-MM-dd' // Changed from 'yyyy-MM-DD' to 'yyyy-MM-dd'
+              }
+            },
+            title: {
+              display: true,
+              text: 'Date',
+              color: isDarkMode ? '#f1f1f1' : '#333'
+            },
+            ticks: {
+              color: isDarkMode ? '#f1f1f1' : '#333'
+            },
+            grid: {
+              color: isDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)'
+            }
+          },
+          y: {
+            title: {
+              display: true,
+              text: 'Price (USD)',
+              color: isDarkMode ? '#f1f1f1' : '#333'
+            },
+            ticks: {
+              color: isDarkMode ? '#f1f1f1' : '#333',
+              callback: function(value) {
+                return `$${value.toFixed(2)}`;
+              }
+            },
+            grid: {
+              color: isDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)'
+            }
+          }
+        }
+      }
+    });
+    console.log("Chart rendered successfully for", crypto);
+  } catch (err) {
+    console.error("Error updating chart:", err, err.stack);
+    document.getElementById('chart-error').textContent = `Error rendering graph: ${err.message}`;
+    document.getElementById('chart-error').style.display = 'block';
+  }
+}
+    document.addEventListener("DOMContentLoaded", () => {
+      fetchLivePrices();
+
+      const body = document.body;
+      const toggle = document.getElementById("theme-toggle");
+
+      if (localStorage.getItem("darkMode") === "enabled") {
+        body.classList.add("dark-mode");
+      }
+
+      toggle.addEventListener("click", function () {
+        body.classList.toggle("dark-mode");
+        const mode = body.classList.contains("dark-mode") ? "enabled" : "disabled";
+        localStorage.setItem("darkMode", mode);
+        if (predictionChart) {
+          const isDarkMode = body.classList.contains('dark-mode');
+          predictionChart.data.datasets[0].borderColor = isDarkMode ? '#90caf9' : '#007bff';
+          predictionChart.data.datasets[0].backgroundColor = isDarkMode ? 'rgba(144, 202, 249, 0.1)' : 'rgba(0, 123, 255, 0.1)';
+          predictionChart.options.plugins.legend.labels.color = isDarkMode ? '#f1f1f1' : '#333';
+          predictionChart.options.scales.x.title.color = isDarkMode ? '#f1f1f1' : '#333';
+          predictionChart.options.scales.x.ticks.color = isDarkMode ? '#f1f1f1' : '#333';
+          predictionChart.options.scales.x.grid.color = isDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)';
+          predictionChart.options.scales.y.title.color = isDarkMode ? '#f1f1f1' : '#333';
+          predictionChart.options.scales.y.ticks.color = isDarkMode ? '#f1f1f1' : '#333';
+          predictionChart.options.scales.y.grid.color = isDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)';
+          predictionChart.update();
+        }
+      });
+
+      document.getElementById("predictBtn").addEventListener("click", sendPrediction);
+      document.getElementById("days").addEventListener("keypress", function (e) {
+        if (e.key === "Enter") sendPrediction();
+      });
+
+      document.getElementById("clearBtn").addEventListener("click", clearPrediction);
+      document.getElementById("sendBtn").addEventListener("click", sendMessage);
+      document.getElementById("userInput").addEventListener("keydown", function (e) {
+        if (e.key === "Enter" && !e.shiftKey) {
+          e.preventDefault();
+          sendMessage();
+        }
+      });
+    });
+
+    function toggleChatbot() {
+      const chatbox = document.getElementById("chatbox");
+      chatbox.style.display = chatbox.style.display === "none" ? "block" : "none";
+    }
+
+    function sendMessage() {
+      const input = document.getElementById("userInput");
+      const userMsg = input.value.trim();
+      if (!userMsg) {
+        console.log("Empty message, ignoring");
+        return;
+      }
+
+      console.log("Sending message:", userMsg);
+      const messagesDiv = document.getElementById("messages");
+      messagesDiv.innerHTML += `<div style="text-align: right; margin: 8px 0;"><span style="background: #007bff; color: white; padding: 8px 12px; border-radius: 18px; display: inline-block; max-width: 80%;">${userMsg}</span></div>`;
+      messagesDiv.scrollTop = messagesDiv.scrollHeight;
+
+      fetch("/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: userMsg })
+      })
+        .then(response => {
+          console.log("Fetch response status:", response.status);
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          return response.json();
+        })
+        .then(data => {
+          console.log("Received response:", data);
+          const botMsg = data.response || "Sorry, I didn't get a response. Try again!";
+          messagesDiv.innerHTML += `<div style="text-align: left; margin: 8px 0;"><span style="background: #e0e0e0; color: black; padding: 8px 12px; border-radius: 18px; display: inline-block; max-width: 80%;">${botMsg}</span></div>`;
+          messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        })
+        .catch(error => {
+          console.error("Error sending message:", error);
+          messagesDiv.innerHTML += `<div style="text-align: left; margin: 8px 0;"><span style="background: #e0e0e0; color: red; padding: 8px 12px; border-radius: 18px; display: inline-block; max-width: 80%;">Error: Could not reach the server. Please try again.</span></div>`;
+          messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        });
+
+      input.value = "";
+    }
+
+    function clearPrediction() {
+      const resultDiv = document.getElementById("result");
+      const alertsDiv = document.getElementById("alerts");
+      const chartError = document.getElementById("chart-error");
+      const canvas = document.getElementById("prediction-chart");
+
+      resultDiv.style.display = "none";
+      alertsDiv.innerHTML = "";
+      chartError.style.display = "none";
+
+      if (predictionChart) {
+        console.log("Clearing chart instance in clearPrediction");
+        predictionChart.destroy();
+        predictionChart = null;
+      }
+
+      if (canvas) {
+        // Reset canvas
+        canvas.width = canvas.width;
+        console.log("Canvas reset in clearPrediction");
+      }
+
+      document.getElementById("crypto").value = "bitcoin";
+      document.getElementById("days").value = "1";
+      console.log("Prediction cleared");
+    }
+
+    function sendPrediction() {
+      const crypto = document.getElementById("crypto").value;
+      const days = document.getElementById("days").value;
+      const resultDiv = document.getElementById("result");
+      const alertsDiv = document.getElementById("alerts");
+      const chartError = document.getElementById("chart-error");
+
+      console.log(`Fetching prediction for ${crypto}, ${days} days`);
+      fetch(`/predict?crypto=${crypto}&days=${days}`, { cache: 'no-store' })
+        .then(res => {
+          console.log("Fetch response status:", res.status);
+          if (!res.ok) {
+            return res.json().then(err => { throw new Error(err.error || `HTTP error! Status: ${res.status}`); });
+          }
+          return res.json();
+        })
+        .then(data => {
+          console.log("Received prediction data:", JSON.stringify(data, null, 2));
+          chartError.style.display = "none";
+          if (data.predicted_price !== undefined && !data.error) {
+            document.getElementById("predicted-price").innerText = `$${data.predicted_price.toFixed(2)}`;
+            document.getElementById("predicted-date").innerText = data.predicted_date;
+            document.getElementById("actual-price").innerText = `$${data.actual_price.toFixed(2)}`;
+            document.getElementById("actual-date").innerText = data.actual_date;
+            document.getElementById("accuracy").innerText = `${data.accuracy_percentage.toFixed(2)}%`;
+            
+            alertsDiv.innerHTML = "";
+            if (data.alerts && Array.isArray(data.alerts)) {
+              data.alerts.forEach(alert => {
+                alertsDiv.innerHTML += `<div class="alert alert-warning">${alert}</div>`;
+              });
+            }
+
+            updateChart(data.historical_prices, data.predicted_date, data.predicted_price, crypto);
+            resultDiv.style.display = "block";
+          } else {
+            console.error("Invalid response data:", data);
+            let errorMessage = data.error || "Invalid response from server. Please try again.";
+            resultDiv.innerHTML = `<h4>Prediction Error</h4><p>${errorMessage}</p>`;
+            resultDiv.style.display = "block";
+            if (predictionChart) {
+              console.log("Clearing chart instance due to prediction error");
+              predictionChart.destroy();
+              predictionChart = null;
+            }
+            const canvas = document.getElementById("prediction-chart");
+            if (canvas) {
+              canvas.width = canvas.width;
+              console.log("Canvas reset due to prediction error");
+            }
+          }
+        })
+        .catch(err => {
+          console.error("Fetch error:", err);
+          let errorMessage = `Failed to fetch prediction: ${err.message}. Please try again.`;
+          resultDiv.innerHTML = `<h4>Prediction Error</h4><p>${errorMessage}</p>`;
+          resultDiv.style.display = "block";
+          if (predictionChart) {
+            console.log("Clearing chart instance due to fetch error");
+            predictionChart.destroy();
+            predictionChart = null;
+          }
+          const canvas = document.getElementById("prediction-chart");
+          if (canvas) {
+            canvas.width = canvas.width;
+            console.log("Canvas reset due to fetch error");
+          }
+        });
+    }
+  </script>
+
+  <style>
+    body.dark-mode {
+      background-color: #121212;
+      color: #f1f1f1;
+    }
+    body.dark-mode header {
+      background-color: #1e1e1e;
+    }
+    body.dark-mode nav a {
+      color: #90caf9;
+    }
+    body.dark-mode .crypto-card {
+      background-color: #1e1e1e;
+      border-color: #333;
+    }
+    body.dark-mode .card {
+      background-color: #1e1e1e;
+      border-color: #333;
+      color: #f1f1f1;
+    }
+    body.dark-mode footer {
+      background-color: #1e1e1e;
+      color: #f1f1f1;
+    }
+    body.dark-mode a {
+      color: #90caf9;
+    }
+    body.dark-mode #chatbox {
+      background-color: #1e1e1e;
+    }
+    body.dark-mode #messages {
+      background-color: #2a2a2a;
+    }
+    .crypto-card {
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background: #fff;
+      transition: background 0.3s;
+    }
+    .card {
+      background: #fff;
+      transition: background 0.3s;
+      border-radius: 10px;
+    }
+    .verify-link {
+      color: #007bff;
+      text-decoration: none;
+      font-size: 0.9em;
+    }
+    .verify-link:hover {
+      text-decoration: underline;
+    }
+    body.dark-mode .verify-link {
+      color: #90caf9;
+    }
+    .custom-select, .custom-input {
+      max-width: 250px;
+      margin: 0 auto;
+    }
+    body.dark-mode .custom-select,
+    body.dark-mode .custom-input {
+      background-color: #2a2a2a;
+      color: #f1f1f1;
+      border-color: #555;
+    }
+    body.dark-mode .custom-select:focus,
+    body.dark-mode .custom-input:focus {
+      background-color: #2a2a2a;
+      color: #f1f1f1;
+      border-color: #90caf9;
+      box-shadow: 0 0 0 0.2rem rgba(144, 202, 249, 0.25);
+    }
+    .form-label {
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    #prediction-chart {
+      max-width: 100%;
+      height: 300px !important;
+      display: block;
+    }
+    #chart-container {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      display: block;
+    }
+    @media (max-width: 991px) {
+      .card {
+        margin-bottom: 20px;
+      }
+    }
+    @media (max-width: 576px) {
+      .custom-select, .custom-input {
+        max-width: 100%;
+      }
+      .card {
+        padding: 15px;
+      }
+      #chart-container {
+        height: 200px;
+      }
+      #prediction-chart {
+        height: 200px !important;
+      }
+    }
+  </style>
+</body>
+</html>
