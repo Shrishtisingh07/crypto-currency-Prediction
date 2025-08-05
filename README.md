@@ -1,4 +1,5 @@
-Money Talks — Cryptocurrency Price Prediction Platform
+Money Talks — Cryptocurrency Price Prediction 
+
 Overview
 Money Talks is an intelligent cryptocurrency web application built using Flask and XGBoost to help users predict future prices of leading cryptocurrencies such as Bitcoin, Ethereum, Binance Coin, and Cardano. It also features live market data, historical price charts, sentiment-based news analysis, a chatbot assistant, and personal portfolio/alerts.
 Features
@@ -17,7 +18,7 @@ Include the following screenshots:
 How It Works
 - ML Model: XGBoost Regressor trained on 365 days of historical prices.
 - Features: Day index, lag1 (1-day price lag), lag7 (7-day lag), MA7 (7-day moving average).
-- Prediction Range: 1–30 days
+- Prediction Range: 1–31 days
 - Accuracy: ~88% to 99.7% based on real test logs.
 Tech Stack
 - Frontend: HTML, CSS, Bootstrap
@@ -68,7 +69,6 @@ Future Enhancements
 - GPT-4 chatbot assistant
 Author
 Shrishti Singh
-License
-MIT License
+
 
 
