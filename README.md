@@ -9,9 +9,10 @@ Money Talks is an intelligent cryptocurrency web application built using Flask a
 - Live crypto market prices (via CoinGecko API)
 - Sentiment-based news section using NewsAPI
 - NLP-powered chatbot assistant
-- 
+  
 **Screenshots**
 Include the following screenshots:
+
 <img width="1920" height="1080" alt="Screenshot 2025-04-25 015154" src="https://github.com/user-attachments/assets/4ae28cdc-13f9-4c7e-8ca6-8f504bef55d7" />
 <img width="1920" height="1080" alt="Screenshot 2025-04-25 015118" src="https://github.com/user-attachments/assets/ec0fe5d1-2f7b-4717-8002-b249b4e3819d" />
 <img width="1920" height="1080" alt="Screenshot 2025-04-25 014117" src="https://github.com/user-attachments/assets/b61176e3-cf0a-4030-aaf6-dd98402cb664" />
@@ -36,15 +37,12 @@ Include the following screenshots:
 ├── templates/
 
        ├── index.html
-       
        ├── about.html
-       
        ├── news.html
 
 ├── static/
 
        ├── script.js
-       
        ├── styles.css
 
 
