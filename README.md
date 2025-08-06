@@ -1,4 +1,4 @@
-**Money Talks — Cryptocurrency Price Prediction **
+Money Talks — Cryptocurrency Price Prediction 
 
 **Overview**
 
@@ -34,12 +34,17 @@ Include the following screenshots:
 ├── app.py
 
 ├── templates/
+
        ├── index.html
+       
        ├── about.html
+       
        ├── news.html
 
 ├── static/
+
        ├── script.js
+       
        ├── styles.css
 
 
@@ -64,7 +69,7 @@ Example response:
 - Docker containerization
 - GPT-4 chatbot assistant
 
-**Author **
+Author 
 Shrishti Singh
 
 
