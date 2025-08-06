@@ -36,13 +36,11 @@ Include the following screenshots:
 ├── app.py
 
 ├── templates/
-
        ├── index.html
        ├── about.html
        ├── news.html
 
 ├── static/
-
        ├── script.js
        ├── styles.css
 
@@ -61,6 +59,7 @@ Example response:
 "actual_price": 92318.23,
 "accuracy_percentage": 98.50
 }
+
 **Future Enhancements**
 - Add user accounts and dashboard
 - Integrate Plotly/D3.js for interactive charts
