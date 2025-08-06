@@ -11,6 +11,7 @@ Money Talks is an intelligent cryptocurrency web application built using Flask a
 - NLP-powered chatbot assistant
   
 **Screenshots**
+
 Include the following screenshots:
 
 <img width="1920" height="1080" alt="Screenshot 2025-04-25 015154" src="https://github.com/user-attachments/assets/4ae28cdc-13f9-4c7e-8ca6-8f504bef55d7" />
